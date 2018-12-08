@@ -1,0 +1,125 @@
+.App-header {
+  background-color: #fff;
+  color: #000000;
+}
+
+.App-header-logo {
+  width: 102px;
+  height: 30px;
+}
+
+.App-home-slider-bg{
+    opacity: 1;
+    background-image: linear-gradient(to right, #000000, #0f273d);
+    background-image: url("../img/sliderbg.png");
+    background-repeat: repeat-y repeat-x;
+}
+
+.App-home-slider-title{
+  color : #fff !important;
+  font-size: 36px !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+}
+
+.App-home-slider-line {
+  width: 220px;
+  height: 4px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+
+.App-home-slider-content{
+  color : #fff !important;
+  margin-top: 19px !important;
+  /* font-size: 20px !important;
+  font-weight: 300  !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important; */
+}
+
+.App-home-slider-signup{
+  color : #3f51b5 !important;
+  margin-top: 19px !important;
+}
+
+.App-home-slider-signup:hover{
+  color : #fff !important;
+  background: '#3f51b5'
+}
+
+.App-home-slider-box{
+  overflow: hidden;
+}
+
+.App-home-slider-small-rectangle{
+  width: 103px;
+  height: 120px;
+  opacity: 0.5;
+  border-radius: 10px;
+  background-color: #d7ebff;
+  float: left;
+  margin: 10px;
+}
+
+.App-home-slider-small-rectangle:hover{
+  width: 123px;
+  height: 140px;
+  opacity: 1;
+  border-radius: 10px;
+  background-color: #d7ebff;
+  float: left;
+  margin: 10px;
+}
+
+.App-Home-MiniSlider{
+  vertical-align: middle;
+  text-align: center;
+}
+
+.App-Home-MiniSliderItem{
+  margin-top: 20px;
+}
+
+.App-Home-MiniSliderItem:hover{
+  margin-top: 20px;
+}
+
+.App-counts{
+  opacity: 1;
+  background-color: #1565c0;
+  padding: 30px 20px;
+}
+
+.App-counts-img{
+  width : 60px;
+  height : 60px;
+}
+
+.App-counts-title{
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff !important;
+}
+
+.App-counts-number{
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff !important;
+}
