@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-import NavBar from '../components/consumerNavBar';
-import Paper from '@material-ui/core/Paper';
+import NavBar from '../components/home/consumerNavBar';
+import HomeSectionTop from '../components/home/homeSectionTop';
+import HomeSlider from '../components/home/homeSlider';
+import HomeEmiCalculator from '../components/home/homeEMICalculator';
+import HomeTestimonial from '../components/home/homeTestimonial';
+import HomeBlog from '../components/home/homeBlog';
+import AwardAndRecognitions from '../components/home/awardsAndRecognitions';
+import Footer from '../components/home/footer';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "../resources/css/animate.min.css";
-import {Animated} from "react-animated-css";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
-import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import '../resources/css/reactslider/style.css';
 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import CardActions from '@material-ui/core/CardActions';
+import classNames from 'classnames';
+
+import green from '@material-ui/core/colors/green';
+import {Animated} from "react-animated-css";
 
 const styles = theme => ({
   root: {
@@ -22,9 +34,6 @@ const styles = theme => ({
   paper: {
     textAlign: 'left',
     color: theme.palette.text.secondary,
-  },
-  fullHeight:{
-    height: "100%",
   },
   fontCase:{
       textTransform: 'none'
@@ -43,35 +52,29 @@ const styles = theme => ({
     lineHeight: "normal",
     letterSpacing: "normal",
     textAlign: "center"
-  },
-  sliderLeftPanel: {
-    paddingLeft: '100px',
-    paddingTop: '150px'
-  },
-  yellowBg : {
-    backgroundColor: 'yellow'
-  },
-  redBg : {
-    backgroundColor: 'red'
-  },
-  greenBg : {
-    backgroundColor: 'green'
-  },  
+  }, 
   card: {
     display: 'flex',
     backgroundColor: 'transparent',
     boxShadow:'none',
-    alignItems : 'center',
-    justifyContent: "center"
+    alignItems : 'start',
+    justifyContent: "start"
+  },
+  cardBlog: {
+    display: 'flex',
+    backgroundColor: '#fff',
+    boxShadow:'none',
+    alignItems : 'start',
+    justifyContent: "start"
   },
   details: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems : 'center'
+    alignItems : 'start'
   },
   content: {
     flex: '1 0 auto',
-    alignItems : 'center'
+    alignItems : 'start'
   },
   cover: {
     width: 151,
@@ -81,199 +84,305 @@ const styles = theme => ({
   },
   countsSecondBlock: {
     paddingLeft : '80px'
+  },
+  sliderSection:{
+    alignItems : 'start',
+    justifyContent: "start"
+  },
+  noShadow:{
+    boxShadow : 'none'
+  },
+  slider2ImgHeight:{
+    height: "70%"
+  },
+  createAccount: {
+    color: "#fff",
+    backgroundColor: green[500],
+    '&:hover': {
+      backgroundColor: green[700],
+    },
+    width : "360px"
+  },
+  applyButton: {
+    color: "#fff",
+    width : "360px",
+    textTransform: 'none'
+  },
+  inline: {
+    display: 'inline',
+  },
+  stepsTitle:{
+    fontSize: "20px",
+    fontWeight: 500,
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "normal",
+    letterSpacing: "normal",
+    color: "#14984a"
+  },
+  media: {
+    //️object-fit is not supported by IE 11.
+    objectFit: 'cover',
   }
 });
 
-const content = [
-	{
-		title: 'Vulputate Mollis Ultricies Fermentum Parturient',
-		description:
-		'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
-		button: 'Read More',
-		image: 'https://i.imgur.com/ZXBtVw7.jpg',
-		user: 'Luan Gjokaj',
-		userProfile: 'https://i.imgur.com/JSW6mEk.png'
-	},
-	{
-		title: 'Tortor Dapibus Commodo Aenean Quam',
-		description:
-		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
-		button: 'Discover',
-		image: 'https://i.imgur.com/DCdBXcq.jpg',
-		user: 'Erich Behrens',
-		userProfile: 'https://i.imgur.com/0Clfnu7.png'
-	},
-	{
-		title: 'Phasellus volutpat metus',
-		description:
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
-		button: 'Buy now',
-		image: 'https://i.imgur.com/DvmN8Hx.jpg',
-		user: 'Bruno Vizovskyy',
-		userProfile: 'https://i.imgur.com/4KeKvtH.png'
-	}
-];
+const theme = createMuiTheme({
+  palette: {
+    primary: green,
+  },
+  typography: {
+    useNextVariants: true,
+  },
+});
 
 class Home  extends Component {
 
   constructor(props) {
     super(props);
     this.classes = props.classes;
+    this.steps = {
+      showStep1 : true,
+      showStep2 : false,
+      showStep3 : false,
+      showStep4 : false,
+      showStep5 : false
+    };
 
+    this.onStepChange = this.onStepChange.bind(this);
+    
+    this.stepsForLoan = [{
+      title : "1. Make your accont on HealthFin",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      title : "2. Apply for loan as per your requirements",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      title : "3. Upload your Documents",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      title : "4. Get Quick Approvals",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      title : "5. Loan Money gets Disbursed",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }];
+  }
+
+  onStepChange( index ){
+    // debugger;
+    this.steps = {
+      showStep1 : false,
+      showStep2 : false,
+      showStep3 : false,
+      showStep4 : false,
+      showStep5 : false
+    };
+
+    switch( index ){
+      case 0:
+        this.steps.showStep1 = true;
+        break;
+      case 1:
+        this.steps.showStep2 = true;
+        break;
+      case 2:
+        this.steps.showStep3 = true;
+        break;
+      case 3:
+        this.steps.showStep4 = true;
+        break;
+      case 4:
+        this.steps.showStep5 = true;
+        break;
+      default:
+        this.steps.showStep1 = true;
+        break;
+    }
+
+    this.setState({
+      steps : this.steps
+    });
+    
   }
 
   render() {
+    
     return (
-      
         <Grid container spacing={0}className={this.classes.root} >
+          <NavBar/>
+          <HomeSectionTop/>
+          <HomeSlider/>
+          
           <Grid item xs={12}>
-            <Paper className={this.classes.paper}>
-              <NavBar/>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} >
-              <Grid container spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={7} className={this.classes.sliderPadding} >
-                   <Typography className={["App-home-slider-title"]} variant="h4" >
-                    Dealing with high Pharmacy bills
-                  </Typography>
-                  <div className="App-home-slider-line"></div>
-                  <Typography className={["App-home-slider-content"]} variant="body1" >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                  </Typography>
-                  <Button variant="contained" color="primary" className={[this.classes.fontCase, "App-home-slider-signup", this.classes.buttonSignUp]}>
-                    Apply Loan                  
-                  </Button>
+            <Grid container spacing={0} className={["App-home-process-bg"]}  alignItems="center" direction="row" justify="center">
+              <Grid item xs={12} className={this.classes.sliderPadding} >
+                <Grid container justify="center" alignItems="center" direction="row" > 
+                  <Grid item xs={12} >
+                    <Typography className={["App-home-process-title"]} variant="h5" >
+                        Steps to get Instant Medical Loan
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} >
+                    <Grid container justify="center" alignItems="center" direction="row" > 
+                      <div className="App-home-process-line"></div>
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <Grid item xs={5}>
-                  <div className="App-home-slider-box">
-                      <Animated animationIn="slideInRight" animationOut="slideInLeft" animationIterationCount="infinite" isVisible={true}>
-                        <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                          <img src={require('../resources/img/home-sliders/pregnant.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                        </div>
-                        <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                          <img src={require('../resources/img/home-sliders/baby-boy.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                        </div>
-                        <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                          <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                        </div>
-                        <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                          <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                        </div>
-                      </Animated>
-                    </div>
-                    <div>
-                      <Animated animationIn="slideInRight" animationOut="slideInLeft" animationIterationCount="infinite" isVisible={true}>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/bones.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/medicine.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                        </Animated>
-                    </div>
-                    <div>
-                      <Animated animationIn="slideInRight" animationOut="slideInLeft" animationIterationCount="infinite" isVisible={true}>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/pharmacy.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/baby-boy.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                          <div className="App-home-slider-small-rectangle App-Home-MiniSlider" >
-                            <img src={require('../resources/img/home-sliders/brain.png')} class="App-Home-MiniSliderItem" alt='Healthfin Logo'/>
-                          </div>
-                        </Animated>
-                        
-                    </div>
+                <Grid container spacing={0}  justify="center" alignItems="center" direction="row" > 
+                  <Grid item xs={5} >
+                    <Grid container justify="center" alignItems="center" direction="row" > 
+                      <List component="nav" className={this.classes.root}>
+                      
+                      {this.stepsForLoan.map( ( item, index ) => (
+                        <ListItem alignItems="flex-start" key={1} index={index} onClick={()=>{this.onStepChange(index)}} role={undefined} dense button className="arrow_box" style={{ padding : '20px 24px' }}>
+                          <ListItemText 
+                            primary={<Typography variant="h6" style={{ color: '#14984a', fontSize:'16px', fontWeight:'bolder' }}>{item.title}</Typography>}
+                            secondary={
+                              <React.Fragment>
+                                {<Typography variant="caption" style={{ color: '#585858', marginTop: "5px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>}
+                              </React.Fragment>
+                            }
+                          />
+                        </ListItem>
+                      ))}
+
+                    
+                      {/* <Divider /> */}
+                      
+                      </List>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={1} >
+                    <Grid container justify="center" alignItems="center" direction="row" > 
+                     
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={5} >
+
+                    <Animated animationIn="flipInY" animationOut="flipInY" isVisible={true} className={this.steps.showStep1 ? '' : 'hidden'}>
+                      <Grid container justify="center" alignItems="center" direction="row"  > 
+                        <Card className={[this.classescard, "App-home-process-card"]}>
+                          <CardContent>
+                              <img src={require('../resources/img/homeSignup.png')} className={[this.classes.slider2ImgHeight]} alt="Test" />
+                          </CardContent>
+                          <CardActions >
+                          <Grid item xs={12} >
+                            <Grid container justify="center" alignItems="center" direction="row" > 
+                                <MuiThemeProvider theme={theme}>
+                                  <Button  variant="contained" color="primary" className={classNames(this.classes.createAccount)} >
+                                    Create Account 1
+                                  </Button>
+                                </MuiThemeProvider>
+                              </Grid>
+                            </Grid>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    </Animated>
+
+                    <Animated animationIn="flipInY" animationOut="flipInY" isVisible={true} className={this.steps.showStep2 ? '' : 'hidden'} >
+                      
+                      <Grid container justify="center" alignItems="center" direction="row"  > 
+                        <Card className={[this.classescard, "App-home-process-card"]}>
+                          <CardContent>
+                              <img src={require('../resources/img/homeSignup.png')} className={[this.classes.slider2ImgHeight]} alt="Test" />
+                          </CardContent>
+                          <CardActions >
+                          <Grid item xs={12} >
+                            <Grid container justify="center" alignItems="center" direction="row" > 
+                                <MuiThemeProvider theme={theme}>
+                                  <Button  variant="contained" color="primary" className={classNames(this.classes.createAccount)} >
+                                    Create Account 2
+                                  </Button>
+                                </MuiThemeProvider>
+                              </Grid>
+                            </Grid>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    </Animated>
+
+                    <Animated animationIn="flipInY" animationOut="flipInY" isVisible={true} className={this.steps.showStep3 ? '' : 'hidden'} >
+                    
+                      <Grid container justify="center" alignItems="center" direction="row" className={this.steps.showStep3 ? '' : 'hidden'}  > 
+                        <Card className={[this.classescard, "App-home-process-card"]}>
+                          <CardContent>
+                              <img src={require('../resources/img/homeSignup.png')} className={[this.classes.slider2ImgHeight]} alt="Test" />
+                          </CardContent>
+                          <CardActions >
+                          <Grid item xs={12} >
+                            <Grid container justify="center" alignItems="center" direction="row" > 
+                                <MuiThemeProvider theme={theme}>
+                                  <Button  variant="contained" color="primary" className={classNames(this.classes.createAccount)} >
+                                    Create Account 3
+                                  </Button>
+                                </MuiThemeProvider>
+                              </Grid>
+                            </Grid>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    </Animated>
+
+                    <Animated animationIn="flipInY" animationOut="flipInY" isVisible={true} className={this.steps.showStep4 ? '' : 'hidden'} >
+                  
+                      <Grid container justify="center" alignItems="center" direction="row" className={this.steps.showStep4 ? '' : 'hidden'}  > 
+                        <Card className={[this.classescard, "App-home-process-card"]}>
+                          <CardContent>
+                              <img src={require('../resources/img/homeSignup.png')} className={[this.classes.slider2ImgHeight]} alt="Test" />
+                          </CardContent>
+                          <CardActions >
+                          <Grid item xs={12} >
+                            <Grid container justify="center" alignItems="center" direction="row" > 
+                                <MuiThemeProvider theme={theme}>
+                                  <Button  variant="contained" color="primary" className={classNames(this.classes.createAccount)} >
+                                    Create Account 4
+                                  </Button>
+                                </MuiThemeProvider>
+                              </Grid>
+                            </Grid>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    </Animated>
+
+                    <Animated animationIn="flipInY" animationOut="flipInY" isVisible={true} className={this.steps.showStep5 ? '' : 'hidden'} >
+                    
+                      <Grid container justify="center" alignItems="center" direction="row" className={this.steps.showStep5 ? '' : 'hidden'}  > 
+                        <Card className={[this.classescard, "App-home-process-card"]}>
+                          <CardContent>
+                              <img src={require('../resources/img/homeSignup.png')} className={[this.classes.slider2ImgHeight]} alt="Test" />
+                          </CardContent>
+                          <CardActions >
+                          <Grid item xs={12} >
+                            <Grid container justify="center" alignItems="center" direction="row" > 
+                                <MuiThemeProvider theme={theme}>
+                                  <Button  variant="contained" color="primary" className={classNames(this.classes.createAccount)} >
+                                    Create Account 5
+                                  </Button>
+                                </MuiThemeProvider>
+                              </Grid>
+                            </Grid>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    </Animated>
+
+                  </Grid>
                 </Grid>
-              </Grid>
+              </Grid>              
+            </Grid>
           </Grid>
-          <Grid item xs={12} >
-              <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={4}   className="countsFirstBlock">
-                  <Card className={this.classes.card} >
-                    <img src={require('../resources/img/counts/customers.png')} className="App-counts-img" alt=''/>
-                    <div className={this.classes.details}>
-                      <CardContent className={this.classes.content}>
-                        <Typography className={["App-counts-title"]} variant="subheading" >
-                          SATISFIED CUSTOMERS
-                        </Typography>
-                        <Typography className={["App-counts-number"]} variant="h3" >
-                          15,487
-                        </Typography>
-                      </CardContent>
-                    </div>
-                  </Card>
-                </Grid>
-                <Grid item xs={4} className="countsSecondBlock">
-                  <Card className={this.classes.card}>
-                    <img src={require('../resources/img/counts/cities.png')} className="App-counts-img" alt=''/>
-                    <div className={this.classes.details}>
-                      <CardContent className={this.classes.content}>
-                        <Typography className={["App-counts-title"]} variant="subheading" >
-                        CITIES PRESENCE
-                        </Typography>
-                        <Typography className={["App-counts-number"]} variant="h3" >
-                          60
-                        </Typography>
-                      </CardContent>
-                    </div>
-                  </Card>
-                </Grid>
-                <Grid item xs={4}  >
-                  <Card className={this.classes.card}>
-                    <img src={require('../resources/img/counts/success.png')} className="App-counts-img" alt=''/>
-                    <div className={this.classes.details}>
-                      <CardContent className={this.classes.content}>
-                        <Typography className={["App-counts-title"]} variant="subheading" >
-                         SUCCESS RATIO
-                        </Typography>
-                        <Typography className={["App-counts-number"]} variant="h3" >
-                          98%
-                        </Typography>
-                      </CardContent>
-                    </div>
-                  </Card>
-                </Grid>
-              </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Paper className={this.classes.paper}>
-            <Slider className="slider-wrapper">
-              {content.map((item, index) => (
-                <div
-                  key={index}
-                  className="slider-content"
-                  style={{ background: `url('${item.image}') no-repeat center center` }}
-                >
-                  <div className="inner">
-                    <h1>{item.title}</h1>
-                    <p>{item.description}</p>
-                    <button>{item.button}</button>
-                  </div>
-                  <section>
-                    <img src={item.userProfile} alt={item.user} />
-                    <span>
-                      Posted by <strong>{item.user}</strong>
-                    </span>
-                  </section>
-                </div>
-              ))}
-            </Slider>
-            </Paper>
-          </Grid>
-          <Grid item xs={12}>
-          </Grid>
+          
+          <HomeEmiCalculator/>
+          <HomeTestimonial/>
+          <HomeBlog/>
+          <AwardAndRecognitions/>
+          <Footer/>
         </Grid>
     );
   }
