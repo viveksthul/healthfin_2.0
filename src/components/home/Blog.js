@@ -6,11 +6,11 @@ import 'react-animated-slider/build/horizontal.css';
 import '../../resources/css/reactslider/style.css';
 import PropTypes from 'prop-types';
 import 'react-animated-slider/build/horizontal.css';
-import SmallBlog from '../home/smallBlog';
+import SmallBlog from '../common/SmallBlog';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import { Link, Route, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
     root: {

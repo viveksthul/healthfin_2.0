@@ -24,7 +24,7 @@ const styles = theme => ({
 });
 
 
-const HomeSlider = ( props ) => {
+const Testimonial = ( props ) => {
 
     const { classes } = props;
    
@@ -38,24 +38,24 @@ const HomeSlider = ( props ) => {
                                 Trusted by these and many more customers
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center" style={{ color: '#fff' }}>
+                        <Grid item xs={12}  style={{ color: '#fff' }}>
                             <Grid container justify="center" alignItems="center" direction="row" > 
                             <div className="App-home-testimonial-line"></div>
                             </Grid>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center">
+                        <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
                             <Typography  variant="h4" style={{ color: '#fff', fontSize: "28px",fontWeight: "bold", marginTop : "50px" }}>
                                 “Lorem ipsum dolor sit amet, consectetur adi pscn elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis exercitation.”
                             </Typography>
                             </Grid>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center">
+                        <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
                                 <Avatar alt="Avatar" src={require("../../resources/img/avatar.png")} style={{ width : 75, height :75,marginTop:"30px" }} />  
                             </Grid>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center">
+                        <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
                             <Typography  variant="caption" style={{ color: '#a9abad', fontSize: "1.20rem", marginTop:"10px" }}>
                             John Doe
@@ -69,8 +69,8 @@ const HomeSlider = ( props ) => {
         )
 }
 
-HomeSlider.propTypes = {
+Testimonial.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(HomeSlider);
+export default withStyles(styles)(Testimonial);

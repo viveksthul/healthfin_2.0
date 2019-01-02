@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../components/home/consumerNavBar';
-import Footer from '../components/home/footer';
+import NavBar from '../components/common/ConsumerNavBar';
+import Footer from '../components/common/Footer';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';

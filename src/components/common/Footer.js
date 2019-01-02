@@ -12,7 +12,7 @@ import AlternateEmail from '@material-ui/icons/AlternateEmail';
 import Help from '@material-ui/icons/Help';
 import Tab from '@material-ui/icons/Tab';
 import VerifiedUser from '@material-ui/icons/VerifiedUser';
-
+import { Link } from 'react-router-dom';
 
 const styles = {
     card: {
@@ -72,11 +72,11 @@ const Footer = ( props ) => {
     return ( 
         <Grid item xs={12}>
             <Grid container  className={["App-home-footer-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={1} spacing={24}  className={classes.sliderPadding} >
+                <Grid item xs={1}  className={classes.sliderPadding} >
                     <Grid container justify="center" alignItems="center" direction="row" > 
                     </Grid>
                 </Grid>  
-                <Grid item xs={3} spacing={24}  className={classes.sliderPadding} >
+                <Grid item xs={3} className={classes.sliderPadding} >
                     <Grid container justify="center" alignItems="center" direction="row" > 
                         <Grid item xs={12}>
                             <Grid container spacing={0}   alignItems="center" direction="row" justify="start">
@@ -117,7 +117,7 @@ const Footer = ( props ) => {
                         <Grid item xs={12}>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
                                 <VerifiedUser className={classes.icon} />
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                                <Typography style={{ color: '#fff' }} variant="caption" component={Link} to="/privacyPolicy" >
                                     Privacy Policy
                                 </Typography>
                             </Grid>

@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import NavBar from '../components/home/consumerNavBar';
-import HomeSectionTop from '../components/home/homeSectionTop';
-import HomeSlider from '../components/home/homeSlider';
-import HomeEmiCalculator from '../components/home/homeEMICalculator';
-import HomeTestimonial from '../components/home/homeTestimonial';
-import HomeBlog from '../components/home/homeBlog';
-import AwardAndRecognitions from '../components/home/awardsAndRecognitions';
-import Footer from '../components/home/footer';
+import NavBar from '../components/common/ConsumerNavBar';
+import SectionTop from '../components/home/SectionTop';
+import Slider from '../components/home/Slider';
+import EmiCalculator from '../components/home/EMICalculator';
+import Testimonial from '../components/home/Testimonial';
+import Blog from '../components/home/Blog';
+import AwardAndRecognitions from '../components/home/AwardsAndRecognitions';
+import Footer from '../components/common/Footer';
 
+
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import "../resources/css/animate.min.css";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import 'react-animated-slider/build/horizontal.css';
-import '../resources/css/reactslider/style.css';
-
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CardActions from '@material-ui/core/CardActions';
 import classNames from 'classnames';
 
-import green from '@material-ui/core/colors/green';
+import 'react-animated-slider/build/horizontal.css';
+import '../resources/css/reactslider/style.css';
+import "../resources/css/animate.min.css";
 import {Animated} from "react-animated-css";
 
 const styles = theme => ({
@@ -35,62 +35,15 @@ const styles = theme => ({
     textAlign: 'left',
     color: theme.palette.text.secondary,
   },
-  fontCase:{
-      textTransform: 'none'
-  },
   sliderPadding:{
     paddingLeft:'70px'
   },
-  buttonSignUp: {
-    color: '#005eb3',
-    backgroundColor: '#fff',
-    height : '44px',
-    fontSize: '16px',
-    fontWeight: 500,
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    textAlign: "center"
-  }, 
   card: {
     display: 'flex',
     backgroundColor: 'transparent',
     boxShadow:'none',
     alignItems : 'start',
     justifyContent: "start"
-  },
-  cardBlog: {
-    display: 'flex',
-    backgroundColor: '#fff',
-    boxShadow:'none',
-    alignItems : 'start',
-    justifyContent: "start"
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems : 'start'
-  },
-  content: {
-    flex: '1 0 auto',
-    alignItems : 'start'
-  },
-  cover: {
-    width: 151,
-  },
-  countsFirstBlock: {
-    paddingLeft : '100px'
-  },
-  countsSecondBlock: {
-    paddingLeft : '80px'
-  },
-  sliderSection:{
-    alignItems : 'start',
-    justifyContent: "start"
-  },
-  noShadow:{
-    boxShadow : 'none'
   },
   slider2ImgHeight:{
     height: "70%"
@@ -102,27 +55,6 @@ const styles = theme => ({
       backgroundColor: green[700],
     },
     width : "360px"
-  },
-  applyButton: {
-    color: "#fff",
-    width : "360px",
-    textTransform: 'none'
-  },
-  inline: {
-    display: 'inline',
-  },
-  stepsTitle:{
-    fontSize: "20px",
-    fontWeight: 500,
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    color: "#14984a"
-  },
-  media: {
-    //️object-fit is not supported by IE 11.
-    objectFit: 'cover',
   }
 });
 
@@ -213,9 +145,9 @@ class Home  extends Component {
     
     return (
         <Grid container spacing={0}className={this.classes.root} >
-          <NavBar/>
-          <HomeSectionTop/>
-          <HomeSlider/>
+          <NavBar moduleName="Home"/>
+          <SectionTop />
+          <Slider/>
           
           <Grid item xs={12}>
             <Grid container spacing={0} className={["App-home-process-bg"]}  alignItems="center" direction="row" justify="center">
@@ -238,7 +170,7 @@ class Home  extends Component {
                       <List component="nav" className={this.classes.root}>
                       
                       {this.stepsForLoan.map( ( item, index ) => (
-                        <ListItem alignItems="flex-start" key={1} index={index} onClick={()=>{this.onStepChange(index)}} role={undefined} dense button className="arrow_box" style={{ padding : '20px 24px' }}>
+                        <ListItem alignItems="flex-start" key={index} index={index} onClick={()=>{this.onStepChange(index)}} role={undefined} dense button className="arrow_box" style={{ padding : '20px 24px' }}>
                           <ListItemText 
                             primary={<Typography variant="h6" style={{ color: '#14984a', fontSize:'16px', fontWeight:'bolder' }}>{item.title}</Typography>}
                             secondary={
@@ -378,9 +310,9 @@ class Home  extends Component {
             </Grid>
           </Grid>
           
-          <HomeEmiCalculator/>
-          <HomeTestimonial/>
-          <HomeBlog/>
+          <EmiCalculator/>
+          <Testimonial/>
+          <Blog/>
           <AwardAndRecognitions/>
           <Footer/>
         </Grid>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../components/home/consumerNavBar';
-import Footer from '../components/home/footer';
+import NavBar from '../components/common/ConsumerNavBar';
+import Footer from '../components/common/Footer';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -113,7 +113,7 @@ class Media  extends Component {
   render() {
     return (
         <Grid container spacing={0}className={this.classes.root} alignItems="center" direction="row" justify="center">
-          <NavBar/>
+            <NavBar moduleName="Media"/>
               <Grid container spacing={0} className={[this.classes.root, this.classes.background, this.classes.padding]} alignItems="center" direction="row" justify="center">
                 <Grid item xs={10} >
                   <Grid container spacing={24} justify="start" alignItems="start" direction="row"  > 

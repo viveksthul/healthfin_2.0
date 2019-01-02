@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -109,7 +109,7 @@ const styles = theme => ({
 });
 
 
-const HomeSlider = ( props ) => {
+const EMICalculator = ( props ) => {
 
     const { classes } = props;
    
@@ -181,7 +181,7 @@ const HomeSlider = ( props ) => {
                                     <Divider  style={{marginTop: 10}}/>
                                     <Grid item xs={12}  style={{marginTop: 30}}>
                                         <Grid container spacing={0} >
-                                            <Grid item xs={6} alignItems="center" direction="row" justify="center">
+                                            <Grid item xs={6} >
                                                 <Typography  variant="caption" >
                                                 Total Amount
                                                 </Typography>
@@ -189,7 +189,7 @@ const HomeSlider = ( props ) => {
                                                 Rs. 
                                                 </Typography>
                                             </Grid> 
-                                            <Grid item xs={6} alignItems="center" direction="row" justify="center">
+                                            <Grid item xs={6} >
                                                 <Typography  variant="caption" >
                                                 Monthly Instalments
                                                 </Typography>
@@ -229,8 +229,8 @@ const HomeSlider = ( props ) => {
         )
 }
 
-HomeSlider.propTypes = {
+EMICalculator.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(HomeSlider);
+export default withStyles(styles)(EMICalculator);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -11,28 +11,24 @@ import PropTypes from 'prop-types';
 
 
 const styles = theme => ({
-
     paper: {
-      textAlign: 'left',
-      color: theme.palette.text.secondary,
+        textAlign: 'left',
+        color: theme.palette.text.secondary,
     },
-
     sliderPadding:{
-      paddingLeft:'70px'
+        paddingLeft:'70px'
     },
-
-
     sliderSection:{
-      alignItems : 'start',
-      justifyContent: "start"
+        alignItems : 'start',
+        justifyContent: "start"
     },
     noShadow:{
-      boxShadow : 'none'
+        boxShadow : 'none'
     },
     slider2ImgHeight:{
-      height: "70%"
+        height: "70%"
     }
-  });
+});
 
 const HomeSlider = ( props ) => {
 
@@ -49,7 +45,7 @@ const HomeSlider = ( props ) => {
                                 Apply for HealthFin Medical Loan in case of
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center">
+                        <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
                                 <div className="App-home-slider2-line"></div>
                             </Grid>
@@ -73,7 +69,7 @@ const HomeSlider = ( props ) => {
                                 </span>
                                 </section> */}
                                 <h1>Medical Emergency</h1>
-                                <p alignItems="center" direction="row" justify="center">
+                                <p >
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                 </p>
                             </div>
@@ -91,11 +87,11 @@ const HomeSlider = ( props ) => {
                                     </span>
                                     </section> */}
                                 <h1>Medical Emergency</h1>
-                                <p alignItems="center" direction="row" justify="center" >
+                                <p  >
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     
                                 </p>
-                                <p alignItems="center" direction="row" justify="center" >
+                                <p  >
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     
                                 </p>

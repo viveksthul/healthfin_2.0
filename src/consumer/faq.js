@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../components/home/consumerNavBar';
-import Footer from '../components/home/footer';
+import NavBar from '../components/common/ConsumerNavBar';
+import Footer from '../components/common/Footer';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -104,7 +104,7 @@ class FAQ  extends Component {
   render() {
     return (
         <Grid container spacing={0}className={this.classes.root} alignItems="center" direction="row" justify="center">
-          <NavBar/>
+          <NavBar moduleName="FAQ"/>
             <Grid item xs={12} >
               <Grid container spacing={0} className={["App-faq-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={9} >

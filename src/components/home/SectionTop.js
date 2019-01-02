@@ -62,7 +62,7 @@ const styles = theme => ({
   });
 
 
-class HomeSectionTop  extends Component {
+class SectionTop  extends Component {
     constructor(props) {
         super(props);
         this.classes = props.classes;
@@ -222,84 +222,83 @@ class HomeSectionTop  extends Component {
                         <Grid item xs={6}>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    <ContinueSlider rownumber="1" onMouseOver={this.onMouseOver} data={this.sliderArray1}/>
+                                    {/* <ContinueSlider rownumber="1" onMouseOver={this.onMouseOver} data={this.sliderArray1}/> */}
                                 </Grid>
                             </Grid>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    <ContinueSlider rownumber="4" onMouseOver={this.onMouseOver} data={this.sliderArray2}/>
+                                    {/* <ContinueSlider rownumber="4" onMouseOver={this.onMouseOver} data={this.sliderArray2}/> */}
                                 </Grid>
                             </Grid>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    <ContinueSlider rownumber="3" onMouseOver={this.onMouseOver} data={this.sliderArray3}/>
+                                    {/* <ContinueSlider rownumber="3" onMouseOver={this.onMouseOver} data={this.sliderArray3}/> */}
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item xs={12} >
-               <Grid container className={["App-home-count-bg", "App-home-count-section"]}  alignItems="center" direction="row" justify="center">
-                   <Grid item xs={4}  >
-                       <Card className={this.classes.card} style={{background:"transparent"}}>
-                           <Grid item xs={12} >
-                               <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
-                                   <img src={require('../../resources/img/counts/customers.png')} className="App-counts-img" alt=''/>
-                                   <div className={this.classes.details}>
-                                   <CardContent className={this.classes.content}>
-                                       <Typography className={["App-counts-title"]} variant="subheading" >
-                                       SATISFIED CUSTOMERS
-                                       </Typography>
-                                       <Typography className={["App-counts-number"]} variant="h3" >
-                                       15,487
-                                       </Typography>
-                                   </CardContent>
-                                   </div>
-                               </Grid>
-                               </Grid>
-                           </Card>
-                   </Grid>
-                   <Grid item xs={4} className="countsSecondBlock">
-                       <Card className={this.classes.card} style={{background:"transparent"}}>
-                           <Grid item xs={12} >
-                           <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
-                               <img src={require('../../resources/img/counts/cities.png')} className="App-counts-img" alt=''/>
-                               <div className={this.classes.details}>
-                               <CardContent className={this.classes.content}>
-                                   <Typography className={["App-counts-title"]} variant="subheading" >
-                                   CITIES PRESENCE
-                                   </Typography>
-                                   <Typography className={["App-counts-number"]} variant="h3" >
-                                   60
-                                   </Typography>
-                               </CardContent>
-                               </div>
-                               </Grid>
-                           </Grid>
-                       </Card>
-                   </Grid>
-                   <Grid item xs={4}  >
-                       <Card className={this.classes.card} style={{background:"transparent"}}>
-                           <Grid item xs={12} >
-                               <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
-                               <img src={require('../../resources/img/counts/success.png')} className="App-counts-img" alt=''/>
-                               <div className={this.classes.details}>
-                                   <CardContent className={this.classes.content}>
-                                   <Typography className={["App-counts-title"]} variant="subheading" >
-                                   SUCCESS RATIO
-                                   </Typography>
-                                   <Typography className={["App-counts-number"]} variant="h3" >
-                                       98%
-                                   </Typography>
-                                   </CardContent>
-                               </div>
-                               </Grid>
-                           </Grid>
-                       </Card>
-                   </Grid>
-           
-               </Grid>
-           </Grid>
+                    <Grid container className={["App-home-count-bg", "App-home-count-section"]}  alignItems="center" direction="row" justify="center">
+                    <Grid item xs={4}  >
+                        <Card className={this.classes.card} style={{background:"transparent"}}>
+                            <Grid item xs={12} >
+                                <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
+                                    <img src={require('../../resources/img/counts/customers.png')} className="App-counts-img" alt=''/>
+                                    <div className={this.classes.details}>
+                                    <CardContent className={this.classes.content}>
+                                        <Typography className={["App-counts-title"]} variant="subheading" >
+                                        SATISFIED CUSTOMERS
+                                        </Typography>
+                                        <Typography className={["App-counts-number"]} variant="h3" >
+                                        15,487
+                                        </Typography>
+                                    </CardContent>
+                                    </div>
+                                </Grid>
+                                </Grid>
+                            </Card>
+                    </Grid>
+                    <Grid item xs={4} className="countsSecondBlock">
+                        <Card className={this.classes.card} style={{background:"transparent"}}>
+                            <Grid item xs={12} >
+                            <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
+                                <img src={require('../../resources/img/counts/cities.png')} className="App-counts-img" alt=''/>
+                                <div className={this.classes.details}>
+                                <CardContent className={this.classes.content}>
+                                    <Typography className={["App-counts-title"]} variant="subheading" >
+                                    CITIES PRESENCE
+                                    </Typography>
+                                    <Typography className={["App-counts-number"]} variant="h3" >
+                                    60
+                                    </Typography>
+                                </CardContent>
+                                </div>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={4}  >
+                        <Card className={this.classes.card} style={{background:"transparent"}}>
+                            <Grid item xs={12} >
+                                <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
+                                <img src={require('../../resources/img/counts/success.png')} className="App-counts-img" alt=''/>
+                                <div className={this.classes.details}>
+                                    <CardContent className={this.classes.content}>
+                                    <Typography className={["App-counts-title"]} variant="subheading" >
+                                    SUCCESS RATIO
+                                    </Typography>
+                                    <Typography className={["App-counts-number"]} variant="h3" >
+                                        98%
+                                    </Typography>
+                                    </CardContent>
+                                </div>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                    </Grid>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     
@@ -307,8 +306,8 @@ class HomeSectionTop  extends Component {
     }
 }
 
-HomeSectionTop.propTypes = {
+SectionTop.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(HomeSectionTop);
+export default withStyles(styles)(SectionTop);

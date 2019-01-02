@@ -6,7 +6,8 @@ import Blog from './consumer/blog';
 import Media from './consumer/media';
 import SignUp from './consumer/signup';
 import Login from './consumer/login';
-import { Link, Route, BrowserRouter } from 'react-router-dom';
+import PrivacyPolicy from './consumer/privacyPolicy';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/blog" component={Blog} /> 
           <Route path="/signup" component={SignUp} /> 
           <Route path="/login" component={Login} /> 
+          <Route path="/privacyPolicy" component={PrivacyPolicy} /> 
         </Fragment>
       </BrowserRouter>
     );
