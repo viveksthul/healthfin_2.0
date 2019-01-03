@@ -11,6 +11,13 @@ import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import ContinueSlider from '../common/ContinuousSlider';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
+import Search from '@material-ui/icons/Search';
+import MenuItem from '@material-ui/core/MenuItem';
+import green from '@material-ui/core/colors/green';
+import classNames from 'classnames';
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
     root: {
@@ -24,7 +31,7 @@ const styles = theme => ({
         textTransform: 'none'
     },
     sliderPadding:{
-      paddingLeft:'70px'
+      padding:'0px 50px 0px 20px'
     },
     buttonSignUp: {
       color: '#005eb3',
@@ -58,7 +65,12 @@ const styles = theme => ({
     card : 
     {
         boxShadow:"none"
-    }
+    },
+    applyButton: {
+        color: "#fff",
+        width : "360px",
+        textTransform: 'none'
+      },
   });
 
 
@@ -67,6 +79,16 @@ class SectionTop  extends Component {
         super(props);
         this.classes = props.classes;
         this.onMouseOver = this.onMouseOver.bind(this);
+        this.style =
+        {
+            inputField : {
+                style:{ 
+                    padding: '12px 14px',
+                    fontSize: '0.8em'
+                }
+            }
+        };
+
         this.sliderArray1 = [
             {
                 title : "1. Dealing with high Pharmacy bills",
@@ -194,8 +216,8 @@ class SectionTop  extends Component {
     }
 
     state = {
-        title: "Dealing with high Pharmacy bills",
-        description: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        title: "Instant Medical Loans upto Rs. 50 Lakhs",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
     };
 
     render() {
@@ -203,10 +225,10 @@ class SectionTop  extends Component {
     return ( 
         
         <Grid item xs={12} >
-            <Grid container spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
+            <Grid container style={{background : 'red'}} spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
-                    <Grid container spacing={0} className={["App-home-slider"]}  alignItems="center" direction="row" justify="center">
-                        <Grid item xs={6} className={this.classes.sliderPadding} >
+                    <Grid container  className={["App-home-slider"]}  alignItems="center" direction="row" justify="center">
+                        <Grid item sm={8} xs={12} className={this.classes.sliderPadding} >
                             <Typography className={["App-home-slider-title"]} variant="h4" >
                                 {this.state.title}
                             </Typography>
@@ -219,22 +241,103 @@ class SectionTop  extends Component {
                             </Button>
                             
                         </Grid>
-                        <Grid item xs={6}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
+                        <Grid item sm={4} xs={12}>
+                            {/* <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    {/* <ContinueSlider rownumber="1" onMouseOver={this.onMouseOver} data={this.sliderArray1}/> */}
+                                    <ContinueSlider rownumber="1" onMouseOver={this.onMouseOver} data={this.sliderArray1}/>
                                 </Grid>
                             </Grid>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    {/* <ContinueSlider rownumber="4" onMouseOver={this.onMouseOver} data={this.sliderArray2}/> */}
+                                    <ContinueSlider rownumber="4" onMouseOver={this.onMouseOver} data={this.sliderArray2}/>
                                 </Grid>
                             </Grid>
                             <Grid container spacing={0}  alignItems="center" direction="row" justify="center">
                                 <Grid item xs={12}  >
-                                    {/* <ContinueSlider rownumber="3" onMouseOver={this.onMouseOver} data={this.sliderArray3}/> */}
+                                    <ContinueSlider rownumber="3" onMouseOver={this.onMouseOver} data={this.sliderArray3}/>
                                 </Grid>
-                            </Grid>
+                            </Grid> */}
+
+                            <Card style={{marginTop : "60px", marginBottom : "60px"}}>
+                                <CardContent>
+                                    <Grid container spacing={0} justify="start" alignItems="start" direction="row">
+                                        <Grid item xs={12} >
+                                            <Typography className={["App-home-slider-right-title"]} variant="h6"  >
+                                            We'll get back to you, with best offers
+                                            </Typography>
+                                        </Grid>   
+                                        <Grid item xs={12} >
+                                            <TextField
+                                            id="filled-full-width"
+                                            label="Please tell us your name"
+                                            style={{ marginTop: 20}}
+                                            placeholder="Full Name"
+                                            fullWidth
+                                            margin="normal"
+                                            variant="outlined"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+                                            inputProps={this.style.inputField}
+                                            />
+                                        </Grid> 
+                                        <Grid item xs={12} >
+                                            <TextField
+                                            id="filled-full-width"
+                                            label="How much loan amount are you looking for?"
+                                            style={{ marginTop: 15 }}
+                                            placeholder="Amount"
+                                            fullWidth
+                                            margin="normal"
+                                            variant="outlined"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+                                            inputProps={this.style.inputField}
+                                            />
+                                        </Grid> 
+                                        <Grid item xs={12} >
+                                            <TextField
+                                            id="filled-full-width"
+                                            label="Please tell us your email"
+                                            style={{ marginTop: 15 }}
+                                            placeholder="Email"
+                                            fullWidth
+                                            margin="normal"
+                                            variant="outlined"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+                                            inputProps={this.style.inputField}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} >
+                                            <TextField
+                                            id="filled-full-width"
+                                            label="Please tell us your contact number"
+                                            style={{ marginTop: 15 }}
+                                            placeholder="Contact Number"
+                                            fullWidth
+                                            margin="normal"
+                                            variant="outlined"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+                                            inputProps={this.style.inputField}
+                                            />
+                                        </Grid>    
+                                        <Grid item xs={12}  style={{marginTop: 10}}>
+                                            <Grid container spacing={0} >
+                                                <Button  variant="contained" color="primary" className={classNames(this.classes.applyButton)} >
+                                                    View Plans
+                                                </Button>
+                                            </Grid>
+                                        </Grid> 
+                                    </Grid>
+                                    
+                                </CardContent>
+                            </Card>
+                       
                         </Grid>
                     </Grid>
                 </Grid>

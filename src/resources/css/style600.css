@@ -38,10 +38,11 @@ outline: 1px solid slategrey;
   -webkit-filter: none !important;
           filter: none !important;
 }
-
+@media only screen and (min-width: 600px) {
 .App-home-slider{
-  padding : 40px 40px 40px 0px;
+  padding : 0px;
   min-height: 500px;
+}
 }
 
 .App-home-slider-bg{

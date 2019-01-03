@@ -202,7 +202,7 @@ const EMICalculator = ( props ) => {
                                     <Grid item xs={12}  style={{marginTop: 30}}>
                                         <Grid container spacing={0} >
                                             <Button  variant="contained" color="primary" className={classNames(classes.applyButton)} >
-                                            Apply Now
+                                                Apply Now
                                             </Button>
                                         </Grid>
                                     </Grid>
