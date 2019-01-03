@@ -225,10 +225,10 @@ class SectionTop  extends Component {
     return ( 
         
         <Grid item xs={12} >
-            <Grid container style={{background : 'red'}} spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
+            <Grid container  spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
                     <Grid container  className={["App-home-slider"]}  alignItems="center" direction="row" justify="center">
-                        <Grid item sm={8} xs={12} className={this.classes.sliderPadding} >
+                        <Grid item sm={7} xs={12} className={this.classes.sliderPadding} >
                             <Typography className={["App-home-slider-title"]} variant="h4" >
                                 {this.state.title}
                             </Typography>
