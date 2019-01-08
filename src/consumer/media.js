@@ -115,7 +115,7 @@ class Media  extends Component {
         <Grid container spacing={0}className={this.classes.root} alignItems="center" direction="row" justify="center">
             <NavBar moduleName="Media"/>
               <Grid container spacing={0} className={[this.classes.root, this.classes.background, this.classes.padding]} alignItems="center" direction="row" justify="center">
-                <Grid item xs={10} >
+                <Grid item xs={12} sm={10} >
                   <Grid container spacing={24} justify="start" alignItems="start" direction="row"  > 
                       <Grid item xs={12} >
                           <Typography  variant="h5" style={{color : '#1565c0'}}>
@@ -126,7 +126,7 @@ class Media  extends Component {
                           </Grid>
                         </Grid>
                         {this.FaqQuestions.map((item, index) => (
-                          <Grid item xs={2} >
+                          <Grid item xs={6} sm={2} >
                               <Grid container justify="start" alignItems="start" direction="row" > 
                           
                                 <Card className={this.classes.card}>
@@ -160,7 +160,7 @@ class Media  extends Component {
                           </Grid>
                         </Grid>
                         {this.FaqQuestions.map((item, index) => (
-                          <Grid item xs={2} >
+                          <Grid item xs={6} sm={2} >
                               <Grid container justify="start" alignItems="start" direction="row" > 
                           
                                 <Card className={this.classes.card}>

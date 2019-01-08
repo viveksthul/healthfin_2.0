@@ -32,9 +32,6 @@ const styles = theme => ({
       fontCase:{
           textTransform: 'none'
       },
-      sliderPadding:{
-        paddingLeft:'70px'
-      },
       buttonSignUp: {
         color: '#005eb3',
         backgroundColor: '#fff',
@@ -60,16 +57,6 @@ const styles = theme => ({
       },
       cover: {
         width: 151,
-      },
-      countsFirstBlock: {
-        paddingLeft : '100px'
-      },
-      countsSecondBlock: {
-        paddingLeft : '80px'
-      },
-      sliderSection:{
-        alignItems : 'start',
-        justifyContent: "start"
       },
       noShadow:{
         boxShadow : 'none'
@@ -114,9 +101,9 @@ const EMICalculator = ( props ) => {
     const { classes } = props;
    
     return ( 
-            <Grid item xs={12} >
+            <Grid item sm={12} xs={12} >
                 <Grid container spacing={0} className={["App-emical-slider-bg"]}  alignItems="start" direction="row" justify="start">
-                    <Grid item xs={5} className={classes.sliderPadding} >
+                    <Grid item sm={5} xs={12} className={classNames("App-emical-padding", "App-emical-items")} >
                         <Grid container justify="start" alignItems="start" direction="row"  > 
                             <Card >
                                 <CardContent>
@@ -210,9 +197,9 @@ const EMICalculator = ( props ) => {
                             </Card>
                         </Grid>     
                     </Grid>
-                    <Grid item xs={1}>
+                    <Grid item sm={1} xs={12}  className={classNames( "App-emical-items")} >
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item sm={6} xs={12}  className={classNames( "App-emical-items")} >
                         <Typography className={["App-home-slider-title"]} variant="h4" >
                             Payback in easy instalments
                         </Typography>

@@ -15,18 +15,12 @@ const styles = theme => ({
         textAlign: 'left',
         color: theme.palette.text.secondary,
     },
-    sliderPadding:{
-        paddingLeft:'70px'
-    },
     sliderSection:{
         alignItems : 'start',
         justifyContent: "start"
     },
     noShadow:{
         boxShadow : 'none'
-    },
-    slider2ImgHeight:{
-        height: "70%"
     }
 });
 
@@ -38,7 +32,7 @@ const HomeSlider = ( props ) => {
 
         <Grid item xs={12} className={classes.sliderSection}>
             <Grid container spacing={0} className={["App-home-slider2-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={9} className={classes.sliderPadding} >
+                <Grid item xs={9} className={"App-home-slider2-Padding"} >
                     <Grid container justify="center" alignItems="center" direction="row" > 
                         <Grid item xs={12} >
                             <Typography className={["App-home-slider2-title"]} variant="h5" >
@@ -55,7 +49,7 @@ const HomeSlider = ( props ) => {
                     <Paper className={[classes.paper,classes.noShadow]}>
                         <Slider className={["slider-wrapper"]}>
                             <div key={1} className={["slider-content"]}  >
-                                <img src={require('../../resources/img/home-slider2/group-91.png')} className={[classes.slider2ImgHeight]} alt="Test" />
+                                <img src={require('../../resources/img/home-slider2/group-91.png')} className={["App-home-slider2-img"]} alt="Test" />
                         
                                 <div className="inner">
                                 {/* <h1>{item.title}</h1> */}
@@ -74,7 +68,7 @@ const HomeSlider = ( props ) => {
                                 </p>
                             </div>
                             <div key={2} className={["slider-content"]}  >
-                                <img src={require('../../resources/img/home-slider2/group-91.png')} className={[classes.slider2ImgHeight]} alt="Test" />
+                                <img src={require('../../resources/img/home-slider2/group-91.png')} className={["App-home-slider2-img"]} alt="Healthfin Slider" />
                         
                                 <div className="inner">
                                     {/* <h1>{item.title}</h1> */}

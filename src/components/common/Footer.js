@@ -70,40 +70,36 @@ const Footer = ( props ) => {
     const { classes } = props;
    
     return ( 
-        <Grid item xs={12}>
-            <Grid container  className={["App-home-footer-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={1}  className={classes.sliderPadding} >
+        <Grid item xs={12} sm={12}>
+            <Grid container  className={["App-home-footer-bg"]}  alignItems="start" direction="row" justify="center">
+                <Grid item xs={4} sm={3} >
                     <Grid container justify="center" alignItems="center" direction="row" > 
-                    </Grid>
-                </Grid>  
-                <Grid item xs={3} className={classes.sliderPadding} >
-                    <Grid container justify="center" alignItems="center" direction="row" > 
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}   alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} sm={12}>
+                            <Grid container alignItems="center" direction="row" justify="start">
                                 <Home className={classes.icon} />
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                                <Typography style={{ color: '#fff' }} variant="caption" component={Link} to="/" >
                                     Home
                                 </Typography>
                             </Grid>
                         </Grid>  
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} sm={12}>
+                            <Grid container  alignItems="center" direction="row" justify="start">
                                 <Account className={classes.icon} />
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                                <Typography style={{ color: '#fff' }} variant="caption" component={Link} to="/about">
                                     About
                                 </Typography>
                             </Grid>
                         </Grid>     
-                        <Grid item xs={12}>
-                            <Grid container spacing={0} alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} sm={12}>
+                            <Grid container alignItems="center" direction="row" justify="start">
                                 <Message className={classes.icon} />
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                                <Typography style={{ color: '#fff' }} variant="caption" component={Link} to="/blog" >
                                     Blogs
                                 </Typography>
                             </Grid>
                         </Grid>     
-                        <Grid item xs={12}>
-                            <Grid container spacing={0} alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} sm={12}>
+                            <Grid container alignItems="center" direction="row" justify="start">
                                 <Streetview className={classes.icon} />
                                 <Typography style={{ color: '#fff' }} variant="caption" >
                                     Careers
@@ -112,10 +108,10 @@ const Footer = ( props ) => {
                         </Grid>                 
                     </Grid>
                 </Grid>              
-                <Grid item xs={4} className={classes.sliderPadding} >
+                <Grid item xs={8} sm={4}  >
                     <Grid container justify="start" alignItems="center" direction="row" > 
                         <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                            <Grid container  alignItems="center" direction="row" justify="start">
                                 <VerifiedUser className={classes.icon} />
                                 <Typography style={{ color: '#fff' }} variant="caption" component={Link} to="/privacyPolicy" >
                                     Privacy Policy
@@ -123,7 +119,7 @@ const Footer = ( props ) => {
                             </Grid>
                         </Grid>  
                         <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                            <Grid container  alignItems="center" direction="row" justify="start">
                                 <Tab className={classes.icon} />
                                 <Typography style={{ color: '#fff' }} variant="caption" >
                                     Terms and Conditions
@@ -131,15 +127,15 @@ const Footer = ( props ) => {
                             </Grid>
                         </Grid>     
                         <Grid item xs={12}>
-                            <Grid container spacing={0}   alignItems="center" direction="row" justify="start">
+                            <Grid container   alignItems="center" direction="row" justify="start">
                                 <Help className={classes.icon} />
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                                <Typography style={{ color: '#fff' }} variant="caption"  component={Link} to="/faq">
                                     Frequesntly Asked Questions
                                 </Typography>
                             </Grid>
                         </Grid>     
                         <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                            <Grid container  alignItems="center" direction="row" justify="start">
                                 <AlternateEmail className={classes.icon} />
                                 <Typography style={{ color: '#fff' }} variant="caption" >
                                     customercare@healthfin.in
@@ -148,17 +144,17 @@ const Footer = ( props ) => {
                         </Grid>                 
                     </Grid>
                 </Grid>              
-                <Grid item xs={4} className={classes.sliderPadding} >
-                    <Grid container justify="start" alignItems="center" direction="row" > 
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
-                                <Typography style={{ color: '#fff' }} variant="caption" >
+                <Grid item xs={12} sm={4}  >
+                    <Grid container spacing={24} justify="start" alignItems="center" direction="row" > 
+                        <Grid item xs={12} className="App-home-footer-contact" style={{marginTop:20}}>
+                            <Grid container  alignItems="center" direction="row" justify="start" >
+                                <Typography style={{ color: '#fff',padding :0 }} variant="caption">
                                     Follow us on
                                 </Typography>
                               </Grid>
                         </Grid>  
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} className="App-home-footer-contact">
+                            <Grid container  alignItems="center" direction="row" justify="start" >
 
                                 <img src={require('../../resources/img/social/fb.svg')} className={classes.social} />
                                 <img src={require('../../resources/img/social/twitter.svg')} className={classes.social} />
@@ -168,37 +164,34 @@ const Footer = ( props ) => {
                                 
                             </Grid>
                         </Grid>  
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} className="App-home-footer-contact" style={{marginTop:15}}>
+                            <Grid container  alignItems="center" direction="row" justify="start" >
                                 <Typography style={{ color: '#fff' }} variant="caption" >
                                     Contact us on
                                 </Typography>
                               </Grid>
                         </Grid>  
-                        
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} className="App-home-footer-contact">
+                            <Grid container  alignItems="center" direction="row" justify="start" >
                                 <Typography style={{ color: '#fff' }} variant="caption" >
-                               
                                     +91-7507008181 
                                     +91-9561137766   
                                 </Typography>   
                             </Grid>
                         </Grid>   
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
+                        <Grid item xs={12} className="App-home-footer-contact" style={{marginTop:15}}>
+                            <Grid container  alignItems="center" direction="row" justify="start" >
                                 <Typography style={{ color: '#fff' }} variant="caption" >
                                  Office address
                                 </Typography>
                               </Grid>
                         </Grid>  
                         
-                        <Grid item xs={12}>
-                            <Grid container spacing={0}  alignItems="center" direction="row" justify="start">
-                              <Typography style={{ color: '#fff' }} variant="caption" >
-                             
+                        <Grid item xs={12} className="App-home-footer-contact">
+                            <Grid container  alignItems="center" direction="row" justify="start">
+                                <Typography style={{ color: '#fff' }} variant="caption" >
                                  #123- B, Industrial Complex, Wanowarie, Pune, Maharashtra, India
-                                 </Typography>
+                                </Typography>
                             </Grid>
                         </Grid>  
                     </Grid>

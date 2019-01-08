@@ -23,6 +23,17 @@ outline: 1px solid slategrey;
   height: 30px;
 }
 
+.App-header-logo-sm{
+  display: none !important;  
+}
+
+.App-header-navButton{
+  display: none !important;
+}
+  
+.App-header-navItem{
+  display: block;
+}
 
 .App-header-toolbar {
   min-height: 50px !important;
@@ -194,6 +205,14 @@ outline: 1px solid slategrey;
   
 }
 
+.App-home-slider2-Padding{
+  padding:0px 50px 0px 20px !important;
+}
+
+.App-home-process-Padding{
+  padding: 0px 0px 0px 70px;
+}
+
 .App-home-slider2-title{
   font-size: 24px !important;
   font-weight: bold !important;
@@ -203,6 +222,10 @@ outline: 1px solid slategrey;
   letter-spacing: normal !important;
   text-align: center !important;
   color: #005eb3 !important;
+}
+
+.App-home-slider2-img{
+  width : 50% !important;
 }
 
 .App-home-slider2-line{
@@ -247,6 +270,10 @@ outline: 1px solid slategrey;
 
 .App-home-emical-card{
   padding: 10px 20px;
+}
+
+.App-emical-padding{
+  padding-left: 40px
 }
 
 .App-home-emical-bg{
@@ -309,6 +336,8 @@ outline: 1px solid slategrey;
   padding: 60px 30px;
 }
 
+
+
 .App-home-testimonial-bg{
   background:#393c42;
   color : #fff;
@@ -331,6 +360,18 @@ outline: 1px solid slategrey;
   margin-bottom: 20px;
   width: 146px;
   height: 2px;
+}
+
+.App-home-blog{
+  padding-left: 70px !important;
+}
+
+.App-home-blog-show-desktop{
+  display : block;
+}
+
+.App-home-blog-show-mb{
+  display : none;
 }
 
 .App-home-blog-bg{
@@ -368,15 +409,17 @@ outline: 1px solid slategrey;
 .App-home-footer-bg{
   background:#282727;
   color : #fff;
+  padding: 20px !important;
 }
 
 .App-about-slider-bg{
   opacity: 1;
   background-color: #131c3c;
 }
-
-
-
+  
+.App-about-top-section{
+  padding-left: 70px !important;
+}
 .App-about-slider-title{
   color : #fff !important;
   font-size: 24px !important;
@@ -432,6 +475,12 @@ outline: 1px solid slategrey;
 }
 
 
+.App-about-team-bg img{
+  margin:20px;
+}
+
+
+
 .App-about-team-content{
   color : #000 !important;
   margin-top: 19px !important;
@@ -473,6 +522,16 @@ outline: 1px solid slategrey;
   background: #1565c0;
   margin-top: 10px;
 }
+
+.App-home-footer-contact{
+  padding : 5px 15px 0px 15px !important;
+}
+
+
+.App-signup-container{
+  padding : 50px;
+}
+
 
 
 .exampleSlider {
@@ -586,4 +645,19 @@ outline: 1px solid slategrey;
 
 .App-signup-content-left{
   padding: 0 40px;
+}
+.App-login-container{
+  padding: 50px !important;
+}
+
+.App-login-content{
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  height:400px;
+}
+
+.App-home-steps-item-bottom {
+  border-radius: 6px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff !important;
 }

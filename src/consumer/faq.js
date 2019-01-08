@@ -107,7 +107,7 @@ class FAQ  extends Component {
           <NavBar moduleName="FAQ"/>
             <Grid item xs={12} >
               <Grid container spacing={0} className={["App-faq-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={9} >
+                <Grid item xs={11} sm={9} >
                   <Typography className={["App-faq-title"]} variant="h6" >
                     Frequently Asked Questions (FAQ's)
                   </Typography>
@@ -131,7 +131,7 @@ class FAQ  extends Component {
 
                 
                 </Grid>
-                <Grid item xs={9} >
+                <Grid item xs={11} sm={9} >
                   <Grid container spacing={0} className={this.classes.root} alignItems="center" direction="row" justify="center" style={{marginTop : 30}}>
                     <Button variant="outlined" color="primary" className={this.classes.button}>
                       + View All

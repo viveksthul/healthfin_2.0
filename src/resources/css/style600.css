@@ -1,590 +1,972 @@
-::-webkit-scrollbar {
-  width: 0.5em;
-}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .App-header-navButton {
+    display: block !important;
+  }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
+  .App-header-logo {
+    display: none !important;
+  }
 
-::-webkit-scrollbar-thumb {
-background-color: darkgrey;
-outline: 1px solid slategrey;
-}
+  .App-header-logo-sm {
+    display: block !important;
+  }
 
-.App-header {
-  background-color: #fff;
-  color: #000000;
-  padding: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.App-header-logo {
-  width: 102px;
-  height: 30px;
-}
+  .App-header-navItem {
+    display: none !important;
+  }
 
 
-.App-header-toolbar {
-  min-height: 50px !important;
-}
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
 
-.App-header-menu-item-active {
-  border-bottom : 4px solid #1068b8 !important;
-  border-radius: 0px !important;
-}
+  .App-home-count-section {
+    padding: 0 20px;
+  }
 
-.App-header-menu-item:hover{
-  background: transparent !important;
-  -webkit-filter: none !important;
-          filter: none !important;
-}
-@media only screen and (min-width: 600px) {
-.App-home-slider{
-  padding : 0px;
-  min-height: 500px;
-}
-}
-
-.App-home-slider-bg{
-    opacity: 1;
-    background-image: linear-gradient(to right, #000000, #0f273d);
-    background-image: url("../img/sliderbg.jpg");
-    background-repeat: repeat-y repeat-x;
-   
-}
-
-.App-home-count-bg{
-  opacity: 1;
-  background-image: url("../img/bg2.png");
-  background-repeat: repeat-y repeat-x;
-  background-color: #1565c0;
-}
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
 
 
-.App-home-slider-title{
-  color : #fff !important;
-  font-size: 32px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-}
+  .App-emical-padding {
+    padding-left: 0px
+  }
 
-.App-home-slider-line {
-  width: 220px;
-  height: 4px;
-  background: #fff;
-  margin-top: 10px;
-}
+  .App-home-slider-title {
+    color: #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
 
+  .App-emical-items{
+    /* float :right !important; */
+  }
 
-.App-home-slider-content{
-  color : #fff !important;
-  margin-top: 19px !important;
-  font-size: 1.00rem !important;
-  font-weight: normal  !important;
-  /*font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important; */
-}
+  .App-home-testimonial{
+    padding: 20px;
+  }
 
-.App-home-slider-signup{
-  color : #3f51b5 !important;
-  margin-top: 19px !important;
-}
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
 
-.App-home-slider-signup:hover{
-  color : #fff !important;
-  background: '#3f51b5'
-}
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
 
-.App-home-slider-box{
-  overflow: hidden;
-}
+  .App-home-blog-show-mb{
+    display : block;
+  }
 
-.App-home-slider-small-rectangle{
-  width: 100px;
-  height: 110px;
-  opacity: 0.5;
-  border-radius: 10px;
-  background-color: #d7ebff;
-  float: left;
-  margin: 10px;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
 
-.App-home-slider-small-rectangle:hover{
-  width: 100px;
-  height: 110px;
-  opacity: 1;
-  border-radius: 10px;
-  background-color: #d7ebff;
-  float: left;
-  margin: 10px;
-  cursor: pointer;
-  -webkit-filter: none; /* Safari 6.0 - 9.0 */
-  filter: none;
-}
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
 
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
 
-.App-home-slider-right-title{
-  font-size: 16px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: start !important;
-  color: #000000 !important;
-}
-
-.App-Home-MiniSlider{
-  vertical-align: middle;
-  text-align: center;
-}
-
-.App-Home-MiniSliderItem{
-  margin-top: 20px;
-
-}
-
-.App-counts{
-  opacity: 1;
-  background-color: transparent;
-  padding: 30px 20px;
-}
-
-.App-home-count-section{
-  padding : 0 50px;
-}
-
-.App-counts-img{
-  width : 60px;
-  height : 60px;
-}
-
-.App-counts-title{
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #fff !important;
-}
-
-.App-counts-number{
-  font-family: Roboto;
-  font-size: 48px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #fff !important;
-}
-
-.App-home-slider2-bg{
-  opacity: 1;
-  background:#fff;
-  padding: 30px 0px;
   
-}
+  .App-about-team-bg img{
+    margin:0px;
+  }
+ 
+  .App-signup-container{
+    padding : 0px;
+  }
 
-.App-home-slider2-title{
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: center !important;
-  color: #005eb3 !important;
-}
-
-.App-home-slider2-line{
-  background: #0c62b3;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 220px;
-  height: 4px;
-}
-
-.App-home-process-card{
-  padding: 30px 0px;
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
   
-}
+  .App-login-container{
+    padding: 0px !important;
+  }
 
-.App-home-process-bg{
-  opacity: 1;
-  background:#f1f1f1;
-  padding: 30px 0px;
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
   
-}
-
-.App-home-process-title{
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: center !important;
-  color: #000000 !important;
-}
-
-.App-home-process-line{
-  background: #000000;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 220px;
-  height: 4px;
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
 }
 
 
-.App-home-emical-card{
-  padding: 10px 20px;
-}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
 
-.App-home-emical-bg{
-  opacity: 1;
-  background:#f1f1f1;
-  /* padding: 30px 30px 30px 0; */
-}
+  .App-header-navButton {
+    display: block !important;
+  }
 
-.App-home-emical-title{
-  font-size: 22px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: start !important;
-  color: #000000 !important;
-}
+  .App-header-logo {
+    display: none !important;
+  }
 
-.App-home-emical-line{
-  background: #000000;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 220px;
-  height: 4px;
-}
+  .App-header-logo-sm {
+    display: block !important;
+  }
 
-.arrow_box {
-  padding: 20px 24px;
-}
+  .App-header-navItem {
+    display: none !important;
+  }
 
-.arrow_box:hover {
-  background: #fff !important;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-}
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
 
-.arrow_box:hover:after {
+  .App-home-count-section {
+    padding: 0 20px;
+  }
 
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: -1.0em;
-  bottom: 0em;
-  left: 100%;
-  top: 32%;
-  box-sizing: border-box;
-  border: 15px solid black;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-135deg);
-  box-shadow: -2px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title {
+    color: #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
   
-}
+  .App-home-testimonial{
+    padding: 20px;
+  }
 
-.App-emical-slider-bg{
-  opacity: 1;
-  background-image: linear-gradient(to right, #000000, #0f273d);
-  background-image: url("../img/sliderbg.jpg");
-  background-repeat: repeat-y repeat-x; 
-  padding: 60px 30px;
-}
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
 
-.App-home-testimonial-bg{
-  background:#393c42;
-  color : #fff;
-  margin : 50px 0px;
-}
-.App-home-testimonial-title{
-  font-size: 23px !important;
-  font-weight: normal !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: center !important;
-  color: #fff !important;
-}
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
 
-.App-home-testimonial-line{
-  background: #fff;
-  margin-top: 7px;
-  margin-bottom: 20px;
-  width: 146px;
-  height: 2px;
-}
+  .App-home-blog-show-mb{
+    display : block;
+  }
 
-.App-home-blog-bg{
-  background:#f2f2f2;
-  color : #000;
-  padding: 50px 0px;
-}
-.App-home-blog-title{
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: center !important;
-  color: #000000 !important;
-}
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
 
-.App-home-blog-line{
-  background: #000000;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 100px;
-  height: 2px;
-}
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
 
-.App-home-blog-section-big-right{
-  background: #fff;
-}
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
 
-.App-home-blog-section-big-right img{
-  width : 600px
-}
-
-.App-home-footer-bg{
-  background:#282727;
-  color : #fff;
-}
-
-.App-about-slider-bg{
-  opacity: 1;
-  background-color: #131c3c;
-}
-
-
-
-.App-about-slider-title{
-  color : #fff !important;
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
   
-}
-
-.App-about-slider-content{
-  color : #fff !important;
-  margin-top: 19px !important;
-  padding-right: 20px;
-  font-size: 16px !important;
-  /*font-weight: 300  !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important; */
-}
-
-.App-aboutus-bg{
-  background:#eff3fb;
-  color : #000000;
-  padding : 50px 0px;
-}
-.App-aboutus-title{
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: center !important;
-  color: #000000 !important;
-}
-
-.App-aboutus-line{
-  background: #000;
-  margin-top: 7px;
-  margin-bottom: 20px;
-  width: 120px;
-  height: 4px;
-}
-
-
-.App-about-team-bg{
-  opacity: 1;
-  background-color: #fff;
-  padding: 40px 0;
-}
-
-
-.App-about-team-content{
-  color : #000 !important;
-  margin-top: 19px !important;
-  padding-right: 20px;
-  font-size: 16px !important;
-}
-
-.App-about-team-title{
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-align: left !important;
-  color: #000 !important;
-}
-
-.App-home-team-line {
-  width: 220px;
-  height: 4px;
-  background: #000;
-  margin-top: 10px;
-}
-
-.App-faq-bg{
-  padding: 40px 0;
-  background: #fafafa;
-}
-
-.App-faq-title{
-  color: #1565c0 !important;
-  font-weight: bold !important;
-}
-
-.App-faq-line{
-  width: 80px;
-  height: 4px;
-  background: #1565c0;
-  margin-top: 10px;
-}
-
-
-.exampleSlider {
-  position: relative;
-  border: 0px solid black;
-}
-@media (max-width: 767px) {
-  .exampleSlider {
-    border-color: transparent;
+  .App-about-team-bg img{
+    margin:0px;
   }
-}
-.exampleSlider .MS-content {
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: none;
-}
-@media (max-width: 767px) {
-  .exampleSlider .MS-content {
-    margin: 0;
+  
+
+  .App-signup-container{
+    padding : 0px;
   }
-}
-.exampleSlider .MS-content .item {
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
-  border: none;
-  /* width: 20%; */
-}
-@media (max-width: 1200px) {
-  .exampleSlider .MS-content .item {
-    width: 25%;
-  }
-}
-@media (max-width: 992px) {
-  .exampleSlider .MS-content .item {
-    width: 33.3333%;
-  }
-}
-@media (max-width: 767px) {
-  .exampleSlider .MS-content .item {
-    width: 50%;
-  }
-}
-.exampleSlider .MS-content .item p {
-  font-size: 30px;
-  text-align: center;
-  line-height: 1;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0px 0;
-}
-.exampleSlider .MS-controls button {
-  position: absolute;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  outline: 0;
-  top: 35px;
-}
-@media (max-width: 767px) {
-  .exampleSlider .MS-controls button {
-    display: none;
-  }
-}
-.exampleSlider .MS-controls .MS-left {
-  left: 10px;
-}
-@media (max-width: 992px) {
-  .exampleSlider .MS-controls .MS-left {
-    left: -2px;
-  }
-}
-.exampleSlider .MS-controls .MS-right {
-  right: 10px;
-}
-@media (max-width: 992px) {
-  .exampleSlider .MS-controls .MS-right {
-    right: -2px;
-  }
+  
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+ .App-login-container{
+  padding: 0px !important;
 }
 
-.hidden { 
-  display:none !important; 
-}
-
-
-.App-blog-line{
-  background: #0c62b3;
-  margin-top: 7px;
-  width: 100px;
-  border-radius: 10px;
-  height: 3px;
-}
-
-.App-media-line{
-  background: #0c62b3;
-  margin-top: 7px;
-  width: 100px;
-  border-radius: 10px;
-  height: 3px;
-}
-
-.App-signup-content{
+.App-login-content{
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  height:400px;
+  height : auto;
+  padding : 0 15px !important;
 }
 
 .App-signup-content-left{
-  padding: 0 40px;
+  padding: 0px;
 }
+  
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .App-header-navButton {
+    display: block !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+  
+  .App-about-team-bg img{
+    margin:0px;
+  }
+  
+  .App-signup-container{
+    padding : 0px;
+  }
+  
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+  .App-login-container{
+    padding: 0px !important;
+  }
+
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
+  
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .App-header-navButton {
+    display: block !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+  
+  .App-about-team-bg img{
+    margin:0px;
+  }
+  
+  .App-signup-container{
+    padding : 0px;
+  }
+  
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+  .App-login-container{
+    padding: 0px !important;
+  }
+
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
+  
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .App-header-navButton {
+    display: block !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+  
+  .App-about-team-bg img{
+    margin:0px;
+  }
+  
+  .App-signup-container{
+    padding : 0px;
+  }
+ 
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+  .App-login-container{
+    padding: 0px !important;
+  }
+
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
+  
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
+}
+
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  .App-header-navButton {
+    display: block !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+  
+  .App-about-team-bg img{
+    margin:0px;
+  }
+  
+  .App-signup-container{
+    padding : 0px;
+  }
+ 
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+  .App-login-container{
+    padding: 0px !important;
+  }
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
+  
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (max-device-width: 667px),
+only screen and (-webkit-device-pixel-ratio: 2) {
+  .App-header-navButton {
+    display: block !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+    
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+
+  .App-about-team-bg img{
+    margin:0px;
+  }
+  
+  .App-signup-container{
+    padding : 0px;
+  }
+ 
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+  .App-login-container{
+    padding: 0px !important;
+  }
+  .App-login-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+  }
+  
+  .App-signup-content-left{
+    padding: 0px;
+  }
+    
+}
+
+
+/* Samsung Galaxy S7 Edge ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min-resolution: 192dpi),
+only screen and (max-width:640px) {
+  .App-header-navButton {
+    display: block !important;
+    margin: 0px !important;
+  }
+
+  .App-header-toolbar {
+    padding: 0px 10px 0px 0px !important;
+  }
+
+  .App-header-logo {
+    display: none !important;
+  }
+
+  .App-header-logo-sm {
+    display: block !important;
+  }
+
+  .App-header-navItem {
+    display: none !important;
+  }
+
+
+  .App-home-slider {
+    padding: 40px 20px 0px 20px;
+  }
+
+  .App-home-count-section {
+    padding: 0 20px;
+  }
+
+  .App-counts {
+    opacity: 1;
+    background-color: transparent;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .App-counts-title {
+    font-size: 16px !important;
+    color: #fff !important;
+    margin-top: 5px !important;
+  }
+
+  .App-counts-number {
+    font-size: 35px !important;
+    color: #fff !important;
+    margin-top: 5px !important;
+  }
+
+  .App-home-slider2-bg {
+    opacity: 1;
+    background: #fff;
+    padding: 30px 0px;
+  }
+
+  .App-home-slider2-Padding {
+    padding: 0px 0px 0px 0px !important;
+  }
+
+  .App-home-slider2-img {
+    width: 100% !important;
+  }
+
+
+  .App-home-process-Padding {
+    padding: 0px 15px;
+  }
+
+  .App-emical-slider-bg {
+    padding: 30px 15px;
+  }
+
+
+  .App-emical-padding {
+    padding-left: 0px
+  }
+
+  .App-home-slider-title{
+    color : #fff !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    margin-top: 40px !important;
+  }
+
+  .App-emical-items{
+    /* float :right !important; */
+  }
+
+  .App-home-testimonial{
+    padding: 20px;
+  }
+
+  .App-home-blog{
+    padding-left: 0px !important;
+  }
+
+  
+  .App-home-blog-show-desktop{
+    display : none;
+  }
+
+  .App-home-blog-show-mb{
+    display : block;
+  }
+
+  .App-home-awards-item{
+    margin-top: 15px !important;
+  }
+
+  .App-home-footer-bg{
+    background:#282727;
+    color : #fff;
+    padding:20px;
+  }
+  
+  .App-home-footer-contact{
+    padding : 5px 15px 0px 15px !important;
+  }
+
+  .App-about-title{
+    margin-top: 30px !important;
+  }
+  
+  .App-about-top-section{
+    padding-left: 20px !important;
+  }
+
+  
+
+  .App-about-team-bg img{
+    margin:0px;
+  }
+
+  .App-signup-container{
+    padding : 0px;
+  }
+
+  .App-signup-title{
+    margin-top: 30px !important;
+  }
+
+  .App-signup-content{
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height : auto;
+    padding : 0 15px !important;
+ }
+
+  .App-login-container{
+    padding: 0px !important;
+  }
+
+  
+.App-login-content{
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  height : auto;
+  padding : 0 15px !important;
+}
+
+.App-signup-content-left{
+  padding: 0px;
+}
+  
+}
+
+

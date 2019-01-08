@@ -4,12 +4,12 @@ import Footer from '../components/common/Footer';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { withStyles,  createMuiTheme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import "../resources/css/animate.min.css";
 import 'react-animated-slider/build/horizontal.css';
 import '../resources/css/reactslider/style.css';
 import green from '@material-ui/core/colors/green';
-
+import classNames from 'classnames';
 
 const styles = theme => ({
   root: {
@@ -124,12 +124,12 @@ class About  extends Component {
     return (
         <Grid container spacing={0}className={this.classes.root} >
           <NavBar moduleName="About"/>
-            <Grid item xs={12} >
+            <Grid item xs={12}  sm={12}>
               <Grid container spacing={0} className={["App-about-slider-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
                   <Grid container spacing={0} alignItems="center" direction="row" justify="center">
-                    <Grid item xs={6} className={this.classes.sliderPadding} >
-                      <Typography className={["App-about-slider-title"]} variant="h3" >
+                    <Grid item xs={12}  sm={6}  className={classNames("App-about-top-section")} >
+                      <Typography className={["App-about-slider-title", "App-about-title"]} variant="h3" >
                           HealthFin launched in March 2012
                       </Typography>
                       <div className="App-home-slider-line"></div>
@@ -137,8 +137,8 @@ class About  extends Component {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                       </Typography>
                     </Grid>
-                    <Grid item xs={6}>
-                      <img src={require('../resources/img/about/topsection.png')} alt=''/>
+                    <Grid item xs={12}  sm={6}>
+                      <img src={require('../resources/img/about/topsection.png')} style={{width : "100%"}}alt=''/>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -170,10 +170,10 @@ class About  extends Component {
               <Grid container spacing={0} className={["App-about-team-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
                   <Grid container spacing={0} alignItems="center" direction="row" justify="center">
-                    <Grid item xs={6}>
-                      <img src={require('../resources/img/about/aboutusteam.png')} style={{margin:"20px"}} alt=''/>
+                    <Grid item xs={12}  sm={6} >
+                      <img src={require('../resources/img/about/aboutusteam.png')} style={{ width : "100%"}} alt=''/>
                     </Grid>
-                    <Grid item xs={6} className={this.classes.sliderPadding} >
+                    <Grid item xs={12}  sm={6} className={this.classes.sliderPadding} >
                       <Typography className={["App-about-team-title"]} variant="h3" >
                         Today a team of 40 dedicated employees
                       </Typography>
@@ -210,8 +210,8 @@ class About  extends Component {
             <Grid item xs={12}>
               <Grid container spacing={0} className={["App-about-team-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
-                  <Typography className={["App-aboutus-title"]} variant="h5" >
-                  We are here to help you to take charge !
+                  <Typography className={["App-aboutus-title"]} variant="h5" style={{padding : "0 20px"}}>
+                    We are here to help you to take charge !
                   </Typography>
                 </Grid>
                 <Grid item xs={12} style={{ color: '#fff' }}>

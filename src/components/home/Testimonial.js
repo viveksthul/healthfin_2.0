@@ -17,9 +17,6 @@ const styles = theme => ({
       paper: {
         textAlign: 'left',
         color: theme.palette.text.secondary,
-      },
-      sliderPadding:{
-        paddingLeft:'70px'
       }
 });
 
@@ -29,9 +26,9 @@ const Testimonial = ( props ) => {
     const { classes } = props;
    
     return ( 
-        <Grid item xs={12}>
+        <Grid item sm={12} xs={12}>
             <Grid container spacing={0} className={["App-home-testimonial-bg"]}  alignItems="center" direction="row" justify="center">
-                <Grid item xs={8} className={classes.sliderPadding} >
+                <Grid item xs={12} sm={8}  className={"App-home-testimonial"} >
                     <Grid container justify="center" alignItems="center" direction="row" > 
                         <Grid item xs={12} >
                             <Typography className={["App-home-testimonial-title"]} variant="h5" >
@@ -45,7 +42,7 @@ const Testimonial = ( props ) => {
                         </Grid>
                         <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
-                            <Typography  variant="h4" style={{ color: '#fff', fontSize: "28px",fontWeight: "bold", marginTop : "50px" }}>
+                            <Typography  variant="h4" style={{ color: '#fff', fontSize: "28px",fontWeight: "bold", marginTop : "50px", textAlign:"center" }}>
                                 “Lorem ipsum dolor sit amet, consectetur adi pscn elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis exercitation.”
                             </Typography>
                             </Grid>

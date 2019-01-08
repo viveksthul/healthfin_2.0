@@ -2,22 +2,16 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import "../../resources/css/animate.min.css";
-import {Animated} from "react-animated-css";
 import 'react-animated-slider/build/horizontal.css';
 import '../../resources/css/reactslider/style.css';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import ContinueSlider from '../common/ContinuousSlider';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import Search from '@material-ui/icons/Search';
-import MenuItem from '@material-ui/core/MenuItem';
-import green from '@material-ui/core/colors/green';
 import classNames from 'classnames';
-import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
     root: {
@@ -29,9 +23,6 @@ const styles = theme => ({
     },
     fontCase:{
         textTransform: 'none'
-    },
-    sliderPadding:{
-      padding:'0px 50px 0px 20px'
     },
     buttonSignUp: {
       color: '#005eb3',
@@ -212,7 +203,6 @@ class SectionTop  extends Component {
                 description: description,
               });  
         }
-        
     }
 
     state = {
@@ -228,7 +218,7 @@ class SectionTop  extends Component {
             <Grid container  spacing={0} className={["App-home-slider-bg"]}  alignItems="center" direction="row" justify="center">
                 <Grid item xs={12} >
                     <Grid container  className={["App-home-slider"]}  alignItems="center" direction="row" justify="center">
-                        <Grid item sm={7} xs={12} className={this.classes.sliderPadding} >
+                        <Grid item sm={7} xs={12} className={"App-home-slider2-Padding"} >
                             <Typography className={["App-home-slider-title"]} variant="h4" >
                                 {this.state.title}
                             </Typography>
@@ -349,18 +339,18 @@ class SectionTop  extends Component {
                                 <Grid container spacing={0} className={["App-counts"]}  alignItems="center" direction="row" justify="center">
                                     <img src={require('../../resources/img/counts/customers.png')} className="App-counts-img" alt=''/>
                                     <div className={this.classes.details}>
-                                    <CardContent className={this.classes.content}>
-                                        <Typography className={["App-counts-title"]} variant="subheading" >
-                                        SATISFIED CUSTOMERS
-                                        </Typography>
-                                        <Typography className={["App-counts-number"]} variant="h3" >
-                                        15,487
-                                        </Typography>
-                                    </CardContent>
+                                        <CardContent className={this.classes.content}>
+                                            <Typography className={["App-counts-title"]} variant="subheading" >
+                                            SATISFIED CUSTOMERS
+                                            </Typography>
+                                            <Typography className={["App-counts-number"]} variant="h3" >
+                                            15,487
+                                            </Typography>
+                                        </CardContent>
                                     </div>
                                 </Grid>
-                                </Grid>
-                            </Card>
+                            </Grid>
+                        </Card>
                     </Grid>
                     <Grid item xs={4} className="countsSecondBlock">
                         <Card className={this.classes.card} style={{background:"transparent"}}>

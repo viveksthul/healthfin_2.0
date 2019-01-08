@@ -112,20 +112,20 @@ class FAQ  extends Component {
 
   render() {
     return (
-        <Grid container spacing={0}className={this.classes.root} alignItems="center" direction="row" justify="center">
+        <Grid container spacing={0} className={this.classes.root} alignItems="center" direction="row" justify="center">
           <NavBar/>
               <Grid container spacing={0} className={[this.classes.root, this.classes.background, this.classes.padding]} alignItems="center" direction="row" justify="center">
-                <Grid item xs={10} >
+                <Grid item sm={12} xs={10}>
                   <Grid container spacing={24} justify="start" alignItems="start" direction="row"  > 
-                      <Grid item xs={12} >
+                      <Grid item sm={12} xs={12} >
                           <Typography  variant="h5" style={{color : '#1565c0'}}>
                             Blogs
                           </Typography>
-                        <Grid container justify="start" alignItems="start" direction="row" > 
+                          <Grid container justify="start" alignItems="start" direction="row" > 
                               <div className="App-blog-line"></div>
                           </Grid>
                       </Grid>
-                      <Grid item xs={9} >
+                      <Grid item sm={9} xs={12} >
                           <Grid container justify="start" alignItems="start" direction="row" > 
                               {this.FaqQuestions.map((item, index) => (
                                   <Card className={this.classes.card}>
@@ -194,7 +194,7 @@ class FAQ  extends Component {
                               ))}
                           </Grid>
                       </Grid>
-                      <Grid item xs={3} >
+                      <Grid item xs={12} sm={3} >
                           <Grid container justify="start" alignItems="start" direction="row" > 
                             <Typography  variant="h6" style={{color : '#000000', marginTop : "25px"}}>
                               Related Blogs

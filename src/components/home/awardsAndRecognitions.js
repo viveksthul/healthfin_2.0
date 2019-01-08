@@ -47,14 +47,14 @@ const AwardsAndRecognitions = ( props ) => {
                                 Awards & Recognitions
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center" style={{ color: '#fff' }}>
+                        <Grid item xs={12} style={{ color: '#fff' }}>
                             <Grid container justify="center" alignItems="center" direction="row" > 
                                 <div className="App-home-testimonial-line"></div>
                             </Grid>
                         </Grid>
-                        <Grid item xs={12} alignItems="center" direction="row" justify="center">
+                        <Grid item xs={12} >
                             <Grid container justify="center" alignItems="center" direction="row" > 
-                                <Grid item xs={4} >
+                                <Grid item xs={12}  sm={4} className="App-home-awards-item">
                                     <Grid container justify="center" alignItems="center" direction="row" > 
                                         <div className={[classes.imgSectionWhite]}>  
                                             <Grid item xs={12} >
@@ -74,7 +74,7 @@ const AwardsAndRecognitions = ( props ) => {
                                         </div>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={4} >
+                                <Grid item xs={12}  sm={4}  className="App-home-awards-item">
                                     <Grid container justify="center" alignItems="center" direction="row" > 
                                        <div className={[classes.imgSection]}>
                                             <Grid item xs={12} >
@@ -85,7 +85,7 @@ const AwardsAndRecognitions = ( props ) => {
                                         </div>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={4} >
+                                <Grid item xs={12}  sm={4}  className="App-home-awards-item">
                                     <Grid container justify="center" alignItems="center" direction="row" > 
                                         <div className={[classes.imgSection]} justify="center" alignItems="center" direction="row">
                                             <Grid item xs={12} >
